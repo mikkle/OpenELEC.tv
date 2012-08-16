@@ -31,6 +31,8 @@ cd ../..
 
 sed -i  -e "/^LATEST_TAR/s/-LATEST/-2012-05-25/g" linux/Makefile
 
+LDFLAGS=”"
+
 make VER=$VER SRCDIR=$(kernel_path) -C linux/ download
 make VER=$VER SRCDIR=$(kernel_path) -C linux/ untar
 make VER=$VER SRCDIR=$(kernel_path) allyesconfig
